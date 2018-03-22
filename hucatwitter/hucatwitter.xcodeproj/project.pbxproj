@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484951E0206110CB009B9FF8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484951DF206110CB009B9FF8 /* HomeDatasourceController.swift */; };
+		484951E5206252B7009B9FF8 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484951E4206252B7009B9FF8 /* Cell.swift */; };
+		484951E720625300009B9FF8 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484951E620625300009B9FF8 /* HomeDatasource.swift */; };
 		48911D8C205BC61000C4D63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48911D8B205BC61000C4D63A /* AppDelegate.swift */; };
 		48911D8E205BC61000C4D63A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48911D8D205BC61000C4D63A /* HomeController.swift */; };
 		48911D93205BC61000C4D63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48911D92205BC61000C4D63A /* Assets.xcassets */; };
 		48911D96205BC61000C4D63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48911D94205BC61000C4D63A /* LaunchScreen.storyboard */; };
+		CE9FB1474CADD8707CC9B662 /* Pods_hucatwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47C1BE03108D18107C9480A /* Pods_hucatwitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		484951DF206110CB009B9FF8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		484951E4206252B7009B9FF8 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		484951E620625300009B9FF8 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		48911D88205BC61000C4D63A /* hucatwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hucatwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48911D8B205BC61000C4D63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48911D8D205BC61000C4D63A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		48911D92205BC61000C4D63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48911D95205BC61000C4D63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48911D97205BC61000C4D63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA0A6BA76CE738E81E528F6 /* Pods-hucatwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hucatwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-hucatwitter/Pods-hucatwitter.release.xcconfig"; sourceTree = "<group>"; };
+		C0B48630DD566956D8801318 /* Pods-hucatwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hucatwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hucatwitter/Pods-hucatwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		C47C1BE03108D18107C9480A /* Pods_hucatwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hucatwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9FB1474CADD8707CC9B662 /* Pods_hucatwitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		484951E12062525D009B9FF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				484951DF206110CB009B9FF8 /* HomeDatasourceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		484951E22062527A009B9FF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				484951E620625300009B9FF8 /* HomeDatasource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		484951E320625284009B9FF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				484951E4206252B7009B9FF8 /* Cell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		48911D7F205BC61000C4D63A = {
 			isa = PBXGroup;
 			children = (
 				48911D8A205BC61000C4D63A /* hucatwitter */,
 				48911D89205BC61000C4D63A /* Products */,
+				BA33D98122D565194C9309BF /* Pods */,
+				A1E236E234FE07738C5C7B6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +89,9 @@
 		48911D8A205BC61000C4D63A /* hucatwitter */ = {
 			isa = PBXGroup;
 			children = (
+				484951E320625284009B9FF8 /* View */,
+				484951E22062527A009B9FF8 /* Model */,
+				484951E12062525D009B9FF8 /* Controller */,
 				48911D8B205BC61000C4D63A /* AppDelegate.swift */,
 				48911D8D205BC61000C4D63A /* HomeController.swift */,
 				48911D92205BC61000C4D63A /* Assets.xcassets */,
@@ -61,6 +101,23 @@
 			path = hucatwitter;
 			sourceTree = "<group>";
 		};
+		A1E236E234FE07738C5C7B6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C47C1BE03108D18107C9480A /* Pods_hucatwitter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA33D98122D565194C9309BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0B48630DD566956D8801318 /* Pods-hucatwitter.debug.xcconfig */,
+				ADA0A6BA76CE738E81E528F6 /* Pods-hucatwitter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48911D9A205BC61000C4D63A /* Build configuration list for PBXNativeTarget "hucatwitter" */;
 			buildPhases = (
+				39845DBBBFA01CAA748A540F /* [CP] Check Pods Manifest.lock */,
 				48911D84205BC61000C4D63A /* Sources */,
 				48911D85205BC61000C4D63A /* Frameworks */,
 				48911D86205BC61000C4D63A /* Resources */,
+				7566A7200F85995AACDB825E /* [CP] Embed Pods Frameworks */,
+				60CC47A27F196A6C59C25DBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,12 +187,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39845DBBBFA01CAA748A540F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hucatwitter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60CC47A27F196A6C59C25DBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hucatwitter/Pods-hucatwitter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7566A7200F85995AACDB825E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-hucatwitter/Pods-hucatwitter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hucatwitter/Pods-hucatwitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48911D84205BC61000C4D63A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484951E720625300009B9FF8 /* HomeDatasource.swift in Sources */,
 				48911D8E205BC61000C4D63A /* HomeController.swift in Sources */,
+				484951E5206252B7009B9FF8 /* Cell.swift in Sources */,
+				484951E0206110CB009B9FF8 /* HomeDatasourceController.swift in Sources */,
 				48911D8C205BC61000C4D63A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,32 +377,34 @@
 		};
 		48911D9B205BC61000C4D63A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B48630DD566956D8801318 /* Pods-hucatwitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4CR2L3EVK;
 				INFOPLIST_FILE = hucatwitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = asia.vitalify.hucatwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		48911D9C205BC61000C4D63A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADA0A6BA76CE738E81E528F6 /* Pods-hucatwitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4CR2L3EVK;
 				INFOPLIST_FILE = hucatwitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = asia.vitalify.hucatwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
