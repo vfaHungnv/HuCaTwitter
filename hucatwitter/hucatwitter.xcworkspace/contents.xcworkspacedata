@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:HomeDatasource.swift">
-   </FileRef>
-   <FileRef
       location = "group:hucatwitter.xcodeproj">
    </FileRef>
    <FileRef
