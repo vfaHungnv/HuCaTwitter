@@ -4,7 +4,7 @@
 ![Alt text](https://img.shields.io/badge/SwiftVersion-4.0-red.svg?link=http://left&link=http://right)
 ![Alt text](https://img.shields.io/badge/IOSVersion-9.1+-green.svg)
 
-![](image_finally.png)
+![](image_finally.png){:height="50%" width="50%"}
 
 ## Release History
 * 1.0
