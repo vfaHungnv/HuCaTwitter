@@ -16,7 +16,9 @@ class HomeDatasource: Datasource {
         
         let rayUser = User(name: "Ray Wenderlich", username: "@rwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software, and gaming. Check out our conference.", profileImage: #imageLiteral(resourceName: "ray"))
         
-        return [hungUser, brianUser, rayUser]
+        let kindleCourseUser = User(name: "Kindle Course", username: "@kindleCourse", bioText: "This recently released course on http://videos.letsbuildthatapp.com/basic-training provides some excellent guidance on how to use UITableView and UICollectionView. Kindle Course is a Yank. She is sitting in the restaurant. She has just arrived to the Vietnam and walks to restaurant alone. She knows no one in Vietnam. Jane sits by herself. Jane is feeling lonely because she knows no one and has no friends in Vietnam. Quang walks in, orders his food. He sits at the table next Jane's. Quang begins a conversation with Jane. He ask question...", profileImage: #imageLiteral(resourceName: "avatar"))
+        
+        return [hungUser, brianUser, rayUser, kindleCourseUser]
     }()
     
     override func footerClasses() -> [DatasourceCell.Type]? {
