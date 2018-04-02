@@ -7,8 +7,15 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionViewLayout.invalidateLayout()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,8 +23,34 @@ class HomeDatasourceController: DatasourceController {
         
         setupNavigationBarItems()
         
-        let homeDatasource = HomeDatasource()
-        self.datasource = homeDatasource
+//        let homeDatasource = HomeDatasource()
+//        self.datasource = homeDatasource
+        
+        fetchHomeFeed()
+    }
+    
+    let tron = TRON(baseURL: "http://api.letsbuildthatapp.com")
+    
+    class Home: JSONDecodable {
+        required init(json: JSON) throws {
+            print("Now ready to parse json: \n", json)
+        }
+    }
+    
+    class JSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            print("JSON Error")
+        }
+    }
+    
+    fileprivate func fetchHomeFeed() {
+        let request: APIRequest<Home, JSONError> = tron.request("", responseSerializer: Customre)
+        request.perform(withSuccess: { (home) in
+            print("Successfully fetched our json objects")
+        }) { (err) in
+            print("Failed to fetch json...", err)
+        }
+//        URLSession.shared.dataTask(with: <#T##URL#>, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>)
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

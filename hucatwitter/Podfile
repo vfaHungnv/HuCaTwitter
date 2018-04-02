@@ -8,5 +8,6 @@ target 'hucatwitter' do
   # Pods for hucatwitter
 
   pod "LBTAComponents"
+  pod 'TRON', '~> 4.0'
 
 end
