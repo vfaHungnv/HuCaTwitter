@@ -15,6 +15,7 @@
 		484951E0206110CB009B9FF8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484951DF206110CB009B9FF8 /* HomeDatasourceController.swift */; };
 		484951E5206252B7009B9FF8 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484951E4206252B7009B9FF8 /* UserHeaderFooter.swift */; };
 		484951E720625300009B9FF8 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484951E620625300009B9FF8 /* HomeDatasource.swift */; };
+		486BC6DE207281FC0023BD7C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BC6DD207281FC0023BD7C /* Service.swift */; };
 		48911D8C205BC61000C4D63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48911D8B205BC61000C4D63A /* AppDelegate.swift */; };
 		48911D8E205BC61000C4D63A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48911D8D205BC61000C4D63A /* HomeController.swift */; };
 		48911D93205BC61000C4D63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48911D92205BC61000C4D63A /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		484951DF206110CB009B9FF8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		484951E4206252B7009B9FF8 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		484951E620625300009B9FF8 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		486BC6DD207281FC0023BD7C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		48911D88205BC61000C4D63A /* hucatwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hucatwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48911D8B205BC61000C4D63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48911D8D205BC61000C4D63A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		486BC6DC207281A80023BD7C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				486BC6DD207281FC0023BD7C /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		48911D7F205BC61000C4D63A = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		48911D8A205BC61000C4D63A /* hucatwitter */ = {
 			isa = PBXGroup;
 			children = (
+				486BC6DC207281A80023BD7C /* Service */,
 				484951E320625284009B9FF8 /* View */,
 				484951E22062527A009B9FF8 /* Model */,
 				484951E12062525D009B9FF8 /* Controller */,
@@ -275,6 +286,7 @@
 				4829DC0A2069FACF000B8070 /* User.swift in Sources */,
 				484951E5206252B7009B9FF8 /* UserHeaderFooter.swift in Sources */,
 				484951E0206110CB009B9FF8 /* HomeDatasourceController.swift in Sources */,
+				486BC6DE207281FC0023BD7C /* Service.swift in Sources */,
 				48911D8C205BC61000C4D63A /* AppDelegate.swift in Sources */,
 				4829DC0C206A0307000B8070 /* UserCell.swift in Sources */,
 			);

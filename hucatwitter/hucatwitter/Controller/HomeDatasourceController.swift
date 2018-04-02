@@ -27,13 +27,28 @@ class HomeDatasourceController: DatasourceController {
 //        self.datasource = homeDatasource
         
         fetchHomeFeed()
+        Service.sharedInstance.fetchHomeFeed()
     }
     
     let tron = TRON(baseURL: "http://api.letsbuildthatapp.com")
     
     class Home: JSONDecodable {
+
+        let users: [User]
         required init(json: JSON) throws {
-            print("Now ready to parse json: \n", json)
+            
+            var users = [User]()
+            let array = json["users"].array
+            for userJson in array! {
+                let name = userJson["name"].stringValue
+                let username = userJson["username"].stringValue
+                let bio = userJson["bio"].stringValue
+                
+                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                
+                users.append(user)
+            }
+            self.users = users
         }
     }
     
@@ -44,13 +59,15 @@ class HomeDatasourceController: DatasourceController {
     }
     
     fileprivate func fetchHomeFeed() {
-        let request: APIRequest<Home, JSONError> = tron.request("", responseSerializer: Customre)
-        request.perform(withSuccess: { (home) in
-            print("Successfully fetched our json objects")
+        let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("/twitter/home")
+        request.perform(withSuccess: { (homeDatasource) in
+            
+            print(homeDatasource.users.count)
+            
+            self.datasource = homeDatasource
         }) { (err) in
             print("Failed to fetch json...", err)
         }
-//        URLSession.shared.dataTask(with: <#T##URL#>, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>)
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
