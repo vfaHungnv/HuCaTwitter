@@ -23,50 +23,8 @@ class HomeDatasourceController: DatasourceController {
         
         setupNavigationBarItems()
         
-//        let homeDatasource = HomeDatasource()
-//        self.datasource = homeDatasource
-        
-        fetchHomeFeed()
-        Service.sharedInstance.fetchHomeFeed()
-    }
-    
-    let tron = TRON(baseURL: "http://api.letsbuildthatapp.com")
-    
-    class Home: JSONDecodable {
-
-        let users: [User]
-        required init(json: JSON) throws {
-            
-            var users = [User]()
-            let array = json["users"].array
-            for userJson in array! {
-                let name = userJson["name"].stringValue
-                let username = userJson["username"].stringValue
-                let bio = userJson["bio"].stringValue
-                
-                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-                
-                users.append(user)
-            }
-            self.users = users
-        }
-    }
-    
-    class JSONError: JSONDecodable {
-        required init(json: JSON) throws {
-            print("JSON Error")
-        }
-    }
-    
-    fileprivate func fetchHomeFeed() {
-        let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("/twitter/home")
-        request.perform(withSuccess: { (homeDatasource) in
-            
-            print(homeDatasource.users.count)
-            
+        Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
             self.datasource = homeDatasource
-        }) { (err) in
-            print("Failed to fetch json...", err)
         }
     }
     
