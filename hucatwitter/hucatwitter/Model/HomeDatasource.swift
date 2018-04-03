@@ -12,20 +12,14 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
+    let tweets: [Tweet]
+    
     required init(json: JSON) throws {
+        let usersJsonArray = json["users"].array
+        self.users = usersJsonArray!.map{User(json: $0)}
         
-        var users = [User]()
-        let array = json["users"].array
-        for userJson in array! {
-            let name = userJson["name"].stringValue
-            let username = userJson["username"].stringValue
-            let bio = userJson["bio"].stringValue
-            
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            
-            users.append(user)
-        }
-        self.users = users
+        let tweetsJsonArray = json["tweets"].array
+        self.tweets = tweetsJsonArray!.map{Tweet(json: $0)}
     }
     
     /*let users: [User] = {
@@ -38,7 +32,7 @@ class HomeDatasource: Datasource, JSONDecodable {
         let kindleCourseUser = User(name: "Kindle Course", username: "@kindleCourse", bioText: "This recently released course on http://videos.letsbuildthatapp.com/basic-training provides some excellent guidance on how to use UITableView and UICollectionView. Kindle Course is a Yank. She is sitting in the restaurant. She has just arrived to the Vietnam and walks to restaurant alone. She knows no one in Vietnam. Jane sits by herself. Jane is feeling lonely because she knows no one and has no friends in Vietnam. Quang walks in, orders his food. He sits at the table next Jane's. Quang begins a conversation with Jane. He ask question...", profileImage: #imageLiteral(resourceName: "avatar"))
         
         return [hungUser, brianUser, rayUser, kindleCourseUser]
-    }()*/
+    }()
     
     let tweets: [Tweet] = {
         let hungUser = User(name: "Hùng Nguyễn", username: "@hungnv", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "avatar"))
@@ -48,7 +42,7 @@ class HomeDatasource: Datasource, JSONDecodable {
         let brianTweet = Tweet(user: brianUser, message: "This is the second tweet message for our sample project. Very very exciting message...")
         
         return [hungTweet, brianTweet]
-    }()
+    }()*/
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
