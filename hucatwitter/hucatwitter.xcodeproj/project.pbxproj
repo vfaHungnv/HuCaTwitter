@@ -115,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				486BC6DC207281A80023BD7C /* Service */,
-				484951E320625284009B9FF8 /* View */,
 				484951E22062527A009B9FF8 /* Model */,
+				484951E320625284009B9FF8 /* View */,
 				484951E12062525D009B9FF8 /* Controller */,
 				48911D8B205BC61000C4D63A /* AppDelegate.swift */,
 				48911D8D205BC61000C4D63A /* HomeController.swift */,
